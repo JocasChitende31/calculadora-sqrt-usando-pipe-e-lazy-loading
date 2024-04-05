@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.menu{
+  width: 100%;
+  background-color: cadetblue ;
+}
+.menu li{
+  display:flex;
+  padding: 0 50px;
+}
+
+.menu li ul{
+  margin: 0 10px;
+  list-style: none;
+  padding: 20px 0;
+
+}
+.menu li ul a{
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  padding: 17px 0;
+}
+.menu li ul a:hover{
+  color:antiquewhite;
+  border-bottom: 3px solid antiquewhite;
+}
+.content{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.content .title{
+  padding: 20px;
+
+}
+.sqrt{
+  display: flex;
+  flex-direction: column;
+}
+.control-group
+{
+  display: flex;
+  padding: 10px 5px;
+  width: 100%;
+}
+.control-group input{
+  width: 200px;
+  height: 10px;
+  padding: 10px;
+  font-size: larger;
+
+  border-radius: 5px;
+  /* border: 1px solid rgb(208, 208, 208); */
+  border: 1px solid rgb(6, 129, 6);
+
+  outline-color: green;
+  outline-offset: 0px;
+
+}
+.control-group input:focus-visible{
+  color: blue;
+}
+
+
+.control-group button {
+  background-color: green;
+  margin-left: 10px;
+  color: white;
+  font-size: 15px;
+  padding: 0 12px;
+  cursor: pointer;
+
+  border-radius: 5px;
+  border: 1px solid green;
+}
+.control-group button:hover{
+  background-color: rgb(1, 104, 1);
+}
+
+.sqrt p{
+  font-weight: bolder;
+  font-size: 20px;
+  color: red;
+}
+.sqrt .result{
+display: block;
+flex-direction: column;
+font-weight: bolder;
+font-size: 20px;
+margin-top: 20px;
+}
+.sqrt .result .sms{
+  font-weight: lighter;
+  font-size: 15px;
+  margin-top: -22px;
+  padding: 0;
+  width: 100%;
+  white-space: pre-wrap;
+}
+.sqrt .result .btn-danger{
+  background-color: rgb(180, 48, 48) ;
+  color: white;
+  margin-top: 5px;
+  font-size: 15px;
+  padding: 8px 12px;
+  cursor: pointer;
+
+  border-radius: 5px;
+  border: solid 1px rgb(180,48,48);
+}
+.sqrt .result .btn-danger:hover{
+  background-color: rgb(159, 71, 71) ;
+}

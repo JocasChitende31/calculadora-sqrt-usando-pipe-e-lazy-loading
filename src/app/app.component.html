@@ -1,0 +1,31 @@
+<div class="menu">
+  <li>
+    <ul><a href="#">Module A</a></ul>
+    <ul><a href="#">Module B</a></ul>
+  </li>
+</div>
+<div class="content">
+  <h1 class="title">Exemplo com Pipes e Lazy Loading</h1>
+  <hr>
+  <div class="sqrt">
+    <h4>
+      Digite o número que deseja saber a Raiz.
+    </h4>
+    <form [formGroup]="form">
+      <div class="control-group">
+        <input type="number" name="numero" id="numero" formControlName="numero" required >
+        <button class="btn btn-primary" (click)="getResult()">Calcular</button>
+      </div>
+    </form>
+    <div class="result" style="text-align: center;" *ngIf="numInput>=0 && sms === '' ">
+      <b>A raiz quadrada de {{numInput}} é:</b>
+      <hr>
+      <p>{{numInput | sqrt}}</p>
+    </div>
+    <div class="result" style="text-align: left;" *ngIf="sms != ''">
+      <p class="sms">{{sms}}</p>
+      <button class="btn-danger" (click)="resetForm()">Reset Form</button>
+    </div>
+
+  </div>
+</div>
