@@ -1,45 +1,29 @@
-import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
-import { SqrtPipe } from './sqrt.pipe';
+import { MatIconModule } from '@angular/material/icon';
+import { CalcMultiplicationRoutingModule } from './calc-multiplication/calc-multiplication-routing.module';
+import { CalcSqrRoutingModule } from './calc-sqr/calc-sqr-routing.module';
+import { FooterComponent } from './footer/footer.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SqrtPipe, NgIf, FormsModule, ReactiveFormsModule],
+  imports: [CalcMultiplicationRoutingModule, CalcSqrRoutingModule,MatIconModule, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  title = 'exemplo-pipes-module';
+  title = 'MakeItSimple';
 
-  form: FormGroup = this.formBuilder.group({
-    numero: ['', Validators.required]
-  });
 
-  numInput: number = -1;
 
-  sms: string = '';
-
-  constructor(private formBuilder: FormBuilder) {
+  constructor() {
 
   }
   ngOnInit() {
 
   }
-  getResult() {
-    const result = this.form.value;
-    if (result.numero === null) {
-      this.sms = "Por Favor! Digite apenas números, \ne antes disso, click em Reset Form \npara limpar o formulário.";
-    }
-    this.numInput = result.numero;
-  }
-  resetForm(){
-    this.form.reset();
-    this.sms = "";
-    this.numInput = -1;
-  }
+
 }
 
 

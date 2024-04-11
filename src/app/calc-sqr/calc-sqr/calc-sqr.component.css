@@ -1,0 +1,108 @@
+.title{
+  text-align: center;
+  color: cadetblue;
+
+
+}
+.content{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 35px;
+}
+
+.sqrt{
+  display: flex;
+  flex-direction: column;
+}
+.sqrt h4{
+  margin: 0 auto;
+  font-weight: 500;
+
+}
+.sqrt form{
+  margin: 0 auto;
+}
+.control-group
+{
+  display: flex;
+  padding: 10px 5px;
+  width: 100%;
+}
+.control-group input{
+  width: 200px;
+  height: 10px;
+  padding: 10px;
+  font-size: larger;
+
+  border-radius: 5px;
+  /* border: 1px solid rgb(208, 208, 208); */
+  border: 1px solid rgb(6, 129, 6);
+
+  outline-color: green;
+  outline-offset: 0px;
+
+}
+.control-group input:focus-visible{
+  color: blue;
+}
+
+
+.control-group button {
+  background-color: cadetblue;
+  margin-left: 10px;
+  color: white;
+  font-size: 15px;
+  padding: 0 12px;
+  cursor: pointer;
+
+  border-radius: 5px;
+  border: 1px solid green;
+}
+.control-group button:hover{
+  background-color: rgb(81, 125, 126);
+}
+
+.sqrt b{
+  font-weight: 500;
+}
+.sqrt .success{
+  font-weight: bolder;
+  font-size: 20px;
+  color: cadetblue;;
+}
+.sqrt .error{
+  font-weight: bolder;
+  font-size: 20px;
+  color: red;
+}
+.sqrt .result{
+display: block;
+flex-direction: column;
+font-weight: bolder;
+font-size: 20px;
+margin-top: 20px;
+}
+.sqrt .result .error{
+  font-weight: lighter;
+  font-size: 15px;
+  margin-top: -22px;
+  padding: 0;
+  width: 100%;
+  white-space: pre-wrap;
+}
+.sqrt .result .btn-danger{
+  background-color: rgb(180, 48, 48) ;
+  color: white;
+  margin-top: 5px;
+  font-size: 15px;
+  padding: 8px 12px;
+  cursor: pointer;
+
+  border-radius: 5px;
+  border: solid 1px rgb(180,48,48);
+}
+.sqrt .result .btn-danger:hover{
+  background-color: rgb(159, 71, 71) ;
+}
