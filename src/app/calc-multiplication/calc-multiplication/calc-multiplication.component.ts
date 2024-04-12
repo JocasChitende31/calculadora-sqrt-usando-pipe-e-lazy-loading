@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './calc-multiplication.component.css'
 })
 export class CalcMultiplicationComponent {
-
+pageTitle = 'Make It Simple: Modúlo Multiplicação';
 }

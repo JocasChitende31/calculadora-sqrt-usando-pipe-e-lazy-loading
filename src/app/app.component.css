@@ -3,39 +3,116 @@
   padding: 0;
 }
 .menu{
-  width: 100%;
   background-color: cadetblue ;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+
 }
-.menu li{
-  display:flex;
-  padding: 0 50px;
+.menu .logo{
+color: white;
+}
+.menu .logo:hover{
+  color:antiquewhite;
+}
+.menu .logo mat-icon{
+  font-size: 35px;
+  height: auto;
+  width: auto;
 }
 
-.menu li ul{
+.menu .right{
+  display:flex;
+  padding: 12px 0px;
+}
+
+.menu .right li{
   margin: 0 10px;
   list-style: none;
-  padding: 23px 0;
+  /* padding: 23px 0; */
 
 }
-.menu li ul a{
+.menu .right li a{
   text-decoration: none;
   color: white;
   letter-spacing: 1px;
-  padding: 20px 0;
+  /* padding: 20px 0; */
 }
-.menu .home{
-  font-weight: bolder;
 
-}
-.menu .home a{
-  letter-spacing: 1px;
-}
-.menu li ul a:hover{
+.menu .right li a:hover{
   color:antiquewhite;
-  border-bottom: 3px solid antiquewhite;
   cursor: pointer;
 }
 .router-link-active{
   color:antiquewhite;
-  border-bottom: 3px solid antiquewhite;
+  border-bottom: 2px solid antiquewhite;
+
+}
+.title{
+  text-align: center;
+  color: cadetblue;
+}
+/* Mobile-styele display:none */
+.menu .button-collapse{
+  display: none;
+}
+.menu .side-nav{
+  display: none;
+}
+
+@media only screen and  (max-width: 600px){
+  .menu .button-collapse{
+    display: flex;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  .menu{
+    position: relative;
+  }
+  .menu .side-nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+    /* background-color: red ; */
+    background-color: cadetblue ;
+    width: 100%;
+    transition: all 0.4s ease;
+    top: 85px;
+    left: -100%;
+    right: 0;
+
+  }
+  .menu .side-nav.open{
+    left:0;
+  }
+  .menu .side-nav li{
+    margin-left: 0;
+    list-style: none;
+    padding: 10px 10px;
+  }
+
+  .menu .side-nav li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+  }
+  .router-link-active-mobile{
+    display: flex;
+
+    /* margin: 1px 0; */
+
+    color:antiquewhite;
+    border-bottom: 1.5px solid antiquewhite;
+    border-bottom-right-radius: 3px;
+
+  }
+  .menu .right{
+    display: none;
+  }
+
 }

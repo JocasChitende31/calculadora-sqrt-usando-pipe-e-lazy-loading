@@ -12,6 +12,9 @@ import { SqrtPipe } from '../../sqrt.pipe';
   styleUrl: './calc-sqr.component.css'
 })
 export class CalcSqrComponent {
+
+  pageTitle = 'Make It Simple: Modúlo Raiz';
+  
   form: FormGroup = this.formBuilder.group({
     numero: ['', Validators.required]
   });

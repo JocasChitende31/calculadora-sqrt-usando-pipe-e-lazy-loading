@@ -1,11 +1,19 @@
-<div class="menu">
-  <li>
-    <ul><mat-icon class="mat-18" >calculate</mat-icon></ul>
-    <ul class="home"><a routerLink="/home" routerLinkActive="router-link-active" >Calc</a></ul>
-    <ul><a routerLink="/multiple" routerLinkActive="router-link-active" >Multiplicação</a></ul>
-    <ul><a routerLink="/sqrt" routerLinkActive="router-link-active" >Raiz Quadrada</a></ul>
-  </li>
-</div>
+<nav>
+  <div class="menu">
+    <a class="logo" routerLink="/home" routerLinkActive="router-link-active"><mat-icon class="mat-18">calculate</mat-icon></a>
+    <a data-activates="menu-mobile" class="button-collapse" ><mat-icon class="mat-18 menu-icon">menu</mat-icon></a>
+    <ul class="right">
+      <li><a routerLink="/multiple" routerLinkActive="router-link-active">Multiplicação</a></li>
+      <li><a routerLink="/sqrt" routerLinkActive="router-link-active">Raiz Quadrada</a></li>
+    </ul>
+    <ul class="side-nav" id="menu-mobile">
+      <li><a routerLink="/multiple" routerLinkActive="router-link-active-mobile">Multiplicação</a></li>
+      <li><a routerLink="/sqrt" routerLinkActive="router-link-active-mobile">Raiz Quadrada</a></li>
+    </ul>
+  </div>
+</nav>
+
+
 
 <router-outlet></router-outlet>
 <app-footer></app-footer>
