@@ -91,7 +91,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [ "../node_modules/js/main.js"]
+            "scripts": [
+              "exemplo-pipes-module/src/assets/customJS/custom.js"
+            ]
           }
         }
       }
