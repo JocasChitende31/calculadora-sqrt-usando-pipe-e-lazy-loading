@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.menu{
+  background-color: cadetblue ;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+
+}
+.menu .logo{
+color: white;
+}
+.menu .logo:hover{
+  color:antiquewhite;
+}
+.menu .logo mat-icon{
+  font-size: 35px;
+  height: auto;
+  width: auto;
+
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.menu .right{
+  display:flex;
+  padding: 12px 0px;
+}
+
+.menu .right li{
+  margin: 0 10px;
+  list-style: none;
+  /* padding: 23px 0; */
+
+}
+.menu .right li a{
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+  /* padding: 20px 0; */
+}
+
+.menu .right li a:hover{
+  color:yellow;
+  cursor: pointer;
+}
+.router-link-active{
+  border-bottom: 2px solid yellow;
+}
+.title{
+  text-align: center;
+  color: cadetblue;
+}
+/* Mobile-styele display:none */
+.menu .button-collapse{
+  display: none;
+}
+.menu .side-nav{
+  display: none;
+}
+
+@media only screen and  (max-width: 600px){
+  .menu .button-collapse{
+    display: flex;
+    color: white;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  .menu{
+    position: relative;
+  }
+  .menu .side-nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+    /* background-color: red ; */
+    background-color: cadetblue ;
+    width: 70%;
+    height: 90%;
+    /* transition: all 0.4s ease; */
+    transition: all 0.4s ease-in-out;
+    top: 84px;
+    left: -70%;
+    right: 0;
+
+
+  }
+  .menu .side-nav.open{
+    left:0;
+    transition: all 0.4s ease-in-out;
+  }
+  .menu .side-nav li{
+    margin: 0 15px 0 15px ;
+    list-style: none;
+    padding: 10px 20px 10px 10px;
+
+    border-bottom: 1px solid yellow;
+  }
+
+  .menu .side-nav li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-weight:600;
+    letter-spacing: 1px;
+  }
+  .active{
+   color: red;
+  }
+  .router-link-active-mobile{
+    display: flex;
+
+    /* margin: 1px 0; */
+
+    color:yellow !important;
+    /* border-bottom: .1px solid antiquewhite; */
+    font-weight: lighter;
+
+  }
+  .menu .right{
+    display: none;
+  }
+
+}

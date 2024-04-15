@@ -14,5 +14,10 @@ hr{
 {
   font-size: 15px;
   color: white;
+
+  b{
+    letter-spacing: .6px;
+  }
 }
+
 
