@@ -2,12 +2,19 @@
   margin: 0;
   padding: 0;
 }
+nav{
+  position: fixed;
+  width: 100%;
+}
 .menu{
   background-color: cadetblue ;
   display: flex;
   justify-items: center;
   justify-content: space-between;
   padding: 20px 30px;
+
+  /* position:fixed; */
+
 
 }
 .menu .logo{
@@ -69,6 +76,10 @@ color: white;
 }
 
 @media only screen and  (max-width: 600px){
+  nav{
+    position: fixed;
+
+  }
   .menu .button-collapse{
     display: flex;
     color: white;
