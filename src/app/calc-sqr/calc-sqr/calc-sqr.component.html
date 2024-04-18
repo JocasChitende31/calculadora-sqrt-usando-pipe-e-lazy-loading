@@ -9,23 +9,24 @@
         <label for="numero">
           Raiz Quadrada<i style="color: red;">*</i>
         </label>
-        <input type="number" name="numero" id="numero" formControlName="numero" required="true" placeholder="número" >
+        <input type="number" name="numero" id="numero" formControlName="numero" required min="0" placeholder="número">
+        <span>{{valueRequired}}</span>
       </div>
       <button *ngIf="!result" class="btn btn-primary" (click)="getResult()">Calcular</button>
       <button *ngIf="result" class="btn btn-danger" (click)="clearForm()">Apagar Dados</button>
     </form>
-    <div class="result" style="text-align: center;" *ngIf="numInput>=0 && sms === '' ">
-      <b>A raiz quadrada de <span>&#8730;</span>{{numInput}} é:</b>
+    <div class="result" style="text-align: center;" *ngIf="result">
+      <b>A raiz quadrada de <span>&#8730;</span>{{valueCalculateSqrt}} é:</b>
       <hr>
-      <p class="success">{{numInput | sqrt}}</p>
+      <p class="success">{{valueCalculateSqrt | sqrt}}</p>
       <div>
         <mat-icon class="mat-18">check_circle_outline</mat-icon>
       </div>
     </div>
-    <div class="result" *ngIf="sms != ''">
+    <!-- <div class="result" *ngIf="sms != ''">
       <p class="error">{{sms}}</p>
       <button class="btn-danger" style="text-align: right;" (click)="resetForm()">Reset Form</button>
-    </div>
+    </div> -->
 
   </div>
 </div>

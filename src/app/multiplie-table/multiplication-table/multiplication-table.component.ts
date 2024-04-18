@@ -1,56 +1,47 @@
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
-import { SqrtPipe } from '../../sqrt.pipe';
 import { MatIcon } from '@angular/material/icon';
+import { MultiplieTablePipe } from '../../pipes/multiplie-table.pipe';
 
 @Component({
-  selector: 'app-calc-sqr',
+  selector: 'app-multiplication-table',
   standalone: true,
-  imports: [FormsModule, MatIcon, NgIf, SqrtPipe, ReactiveFormsModule, RouterOutlet],
-  templateUrl: './calc-sqr.component.html',
-  styleUrl: './calc-sqr.component.css'
+  imports: [FormsModule, MatIcon, MultiplieTablePipe, NgFor, NgIf, ReactiveFormsModule],
+  templateUrl: './multiplication-table.component.html',
+  styleUrl: './multiplication-table.component.css'
 })
-export class CalcSqrComponent {
+export class MultiplicationTableComponent {
 
-  pageTitle = 'Make It Simple: Modúlo Raiz Quadrada';
-
-  result: boolean = false;
-
+  pageTitle: string = 'Make It Simple: Modúlo Tabuada';
+  valueRequired = '';
   form: FormGroup = this.formBuilder.group({
     numero: ['', Validators.required]
   });
-  valueRequired: string = '';
-  valueCalculateSqrt: number = 0;
-
-  sms: string = '';
+  result: boolean = false;
+  valueCalculateTable = 0;
 
 
   constructor(private formBuilder: FormBuilder) {
 
   }
-  ngOnInit() {
 
-  }
   getResult() {
     if (!this.form.valid) {
       this.valueRequired = 'Campo vazio ou inválido!'
-      this.valueCalculateSqrt = -1;
+      this.valueCalculateTable = -1;
       console.log(this.form.value);
     } else {
 
       const n = this.form.value;
       this.valueRequired = '';
-      this.valueCalculateSqrt = n.numero;
+      this.valueCalculateTable = n.numero;
       this.result = !this.result;
     }
 
   }
-
   clearForm() {
     this.form.reset();
     this.result = false;
   }
-
 }

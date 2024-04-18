@@ -10,4 +10,5 @@ import {MatIcon, MatIconModule} from '@angular/material/icon'
 })
 export class HomeComponent {
 
+  pageTitle: string = 'Bem-Vindo/a'
 }

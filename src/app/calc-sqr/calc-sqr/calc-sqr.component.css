@@ -1,11 +1,3 @@
-.title {
-  text-align: center;
-  color: cadetblue;
-  /* margin-top: 300px; */
-  padding: 90px 0 10px 0;
-
-}
-
 .content {
   display: flex;
   align-items: center;
@@ -67,15 +59,29 @@
   outline-color: green;
   outline-offset: 0px;
 
+  transition: all .5s ease-in-out;
+
+
 }
 
 .control-group input:focus-visible {
-  color: blue;
+
+  color: green;
+  outline: .1px solid greenyellow !important;
+
+  transition: all .5s ease-in-out;
 }
 
 ::placeholder {
-  font-weight: lighter;
+  font-weight: 100;
+  color: grey;
   /* font-size: 15px; */
+}
+
+span {
+  padding: 3px 0 0 5px;
+  color: red;
+  font-size: 13px;
 }
 
 form .btn-primary {
@@ -99,6 +105,12 @@ form .btn-primary {
   transition: all 0.2s ease-in-out;
 }
 
+form .btn-primary:hover {
+  background-color: rgb(17, 107, 17);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
 form .btn-danger {
   display: flex;
   justify-content: center;
@@ -119,12 +131,6 @@ form .btn-danger {
   transition: all 0.2s ease-in-out;
 
 
-}
-
-form .btn-primary:hover {
-  background-color: rgb(17, 107, 17);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
 }
 
 form .btn-danger:hover {
@@ -162,6 +168,7 @@ form .btn-danger:hover {
   font-size: 20px;
   margin-top: 20px;
 }
+
 .sqrt .result div mat-icon {
   width: 100%;
   height: 100%;
@@ -173,6 +180,7 @@ form .btn-danger:hover {
 
 
 }
+
 .sqrt .result .error {
   font-weight: lighter;
   font-size: 15px;
@@ -197,8 +205,12 @@ form .btn-danger:hover {
 .sqrt .result .btn-danger:hover {
   background-color: rgb(159, 71, 71);
 }
-@media only screen and  (max-width: 600px){
-  .title{
-    font-size: 20px;
+
+@media only screen and (max-width: 600px) {
+
+  span {
+    padding: 3px 0 0 5px;
+    color: red;
+    font-size: 13px;
   }
 }

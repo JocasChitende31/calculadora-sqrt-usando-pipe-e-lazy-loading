@@ -6,25 +6,25 @@
       <div class="form-group">
         <label class="label-control" for="multiplying">Multiplicando<i
             style="color: red; font-size: 12px;  font-style: normal; font-weight: bold;">*</i></label>
-        <input class="form-control" type="number" formControlName="multiplying" placeholder="número" required
-          required="number">
+        <input class="form-control" type="number" formControlName="multiplying" placeholder="número" required>
+        <span>{{valueRequired}}</span>
+
       </div>
       <b>x</b>
       <div class="form-group">
         <label class="label-control" for="multiplier">Multiplicador<i
             style="color: red; font-size: 12px; font-style: normal; font-weight: bold;">*</i></label>
         <input class="form-control" type="number" formControlName="multiplier" placeholder="número">
+        <span>{{valueRequired}}</span>
       </div>
     </div>
     <button *ngIf="!result" class="btn" type="button" (click)="getResult()">Calcular</button>
     <button *ngIf="result" class="btn-clear-form" type="button" (click)="clearForm()">Apagar Dados</button>
   </form>
-
-
   <div class="result" style="text-align: center;" *ngIf="result">
-    <b>A multiplicação de  {{multiplying}}*{{multiplier}} é:</b>
+    <b>A multiplicação de ({{valueCalculateMultplying}} x {{valueCalculateMultplier}}) é:</b>
     <hr>
-    <p class="success">{{multiplying | multiply: multiplier}}</p>
+    <p class="success">{{valueCalculateMultplying | multiply: valueCalculateMultplier}}</p>
     <div>
       <mat-icon class="mat-18">check_circle_outline</mat-icon>
     </div>

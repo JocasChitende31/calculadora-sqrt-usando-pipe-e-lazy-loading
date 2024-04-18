@@ -16,7 +16,9 @@ export class HeaderComponent {
 
   sidebarItems: {label: string, link: string }[] = [
     {label: 'Multiplicação', link: 'multiple'},
+    {label: 'Soma & Subtração', link: '/plus-minus'},
     {label: 'Raiz Quadrada', link: 'sqrt'},
+    {label: 'Tabuada', link: 'multiple-table'},
     {label: 'Sobre', link: 'about'}
   ];
 

@@ -14,34 +14,42 @@ import { MultiplyPipe } from '../../pipes/multiply.pipe';
 export class CalcMultiplicationComponent {
   pageTitle = 'Make It Simple: Modúlo Multiplicação';
 
-  result: boolean = false;
-  
-
-  multiplying = 0;
-  multiplier = 0;
-  arg = [this.multiplying,this.multiplier]
 
   form: FormGroup = this.formBuilder.group({
     multiplying: ['', Validators.required],
     multiplier: ['', Validators.required]
   })
+
+  result: boolean = false;
+  valueRequired: string = '';
+  valueCalculateMultplying: number = 0;
+  valueCalculateMultplier: number = 0;
+
   constructor(private formBuilder: FormBuilder) { }
 
   getResult() {
-    const values = this.form.value;
-    const n1 = values.multiplying;
-    const n2 = values.multiplier;
-    this.multiplying = n1;
-    this.multiplier = n2;
-    this.result = !this.result;
+    if (!this.form.valid) {
+      this.valueRequired = 'Campo vazio ou inválido!'
+      this.valueCalculateMultplying = -1;
+      this.valueCalculateMultplier = -1;
+    } else {
 
-    console.log(n1 * n2);
+      const values = this.form.value;
+      const n1 = values.multiplying;
+      const n2 = values.multiplier;
+
+      this.valueRequired = '';
+      this.valueCalculateMultplying = n1;
+      this.valueCalculateMultplier = n2;
+      this.result = !this.result;
+    }
   }
 
   clearForm() {
     this.form.reset();
     this.result = false;
   }
+
 }
 
 
