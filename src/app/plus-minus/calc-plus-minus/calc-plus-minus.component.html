@@ -1,3 +1,69 @@
 <h1 class="title">{{pageTitle}}</h1>
 <hr>
-<p>calc-plus-minus works!</p>
+<div class="content" *ngIf="!plus && !minus">
+  <div class="plus-minus-btns">
+    <span>"Escolha a operação"</span>
+    <button class="plus" (click)="showPlusForm()">Soma</button>
+    <button class="minus" (click)="showMinusForm()">Subtração</button>
+  </div>
+</div>
+
+<div class="content-form" *ngIf="plus">
+  <form class="form" [formGroup]="form">
+    <div class="form-content">
+      <div class="form-group">
+        <label class="label-control" for="multiplying">1ºTermo<i
+            style="color: red; font-size: 12px;  font-style: normal; font-weight: bold;">*</i></label>
+        <input class="form-control" type="number" formControlName="numOne" placeholder="número" required>
+        <span>{{valueRequired}}</span>
+      </div>
+      <b>+</b>
+      <div class="form-group">
+        <label class="label-control" for="multiplier">2ºTermo<i
+            style="color: red; font-size: 12px; font-style: normal; font-weight: bold;">*</i></label>
+        <input class="form-control" type="number" formControlName="numTwo" placeholder="número">
+        <span>{{valueRequired}}</span>
+      </div>
+    </div>
+    <button *ngIf="!result" class="btn" type="button" (click)="getResult()">Calcular</button>
+    <button *ngIf="result" class="btn-clear-form" type="button" (click)="clearForm()">Apagar Dados</button>
+  </form>
+  <div class="result" style="text-align: center;" *ngIf="result">
+    <b>A soma de ({{valueCalculateOne}} + {{valueCalculateTwo}}) é:</b>
+    <hr>
+    <p class="success">{{valueCalculateOne | plusMinus: valueCalculateTwo : signalPlus}}</p>
+    <div>
+      <mat-icon class="mat-18">check_circle_outline</mat-icon>
+    </div>
+  </div>
+</div>
+
+<div class="content-form" *ngIf="minus">
+  <form class="form" [formGroup]="form">
+    <div class="form-content">
+      <div class="form-group">
+        <label class="label-control" for="numOne">1ºTermo<i
+            style="color: red; font-size: 12px;  font-style: normal; font-weight: bold;">*</i></label>
+        <input class="form-control" type="number" formControlName="numOne" placeholder="número" required min="0">
+        <span>{{valueRequired}}</span>
+      </div>
+      <b>-</b>
+      <div class="form-group">
+        <label class="label-control" for="multiplier">2ºTermo<i
+            style="color: red; font-size: 12px; font-style: normal; font-weight: bold;">*</i></label>
+        <input class="form-control" type="number" formControlName="numTwo" placeholder="número" min="0">
+        <span>{{valueRequired}}</span>
+      </div>
+    </div>
+    <button *ngIf="!result" class="btn" type="button" (click)="getResult()">Calcular</button>
+    <button *ngIf="result" class="btn-clear-form" type="button" (click)="clearForm()">Apagar Dados</button>
+  </form>
+  <div class="result" style="text-align: center;" *ngIf="result">
+    <b>A subtração de ({{valueCalculateOne}} - {{valueCalculateTwo}}) é:</b>
+    <hr>
+    <p class="success">{{valueCalculateOne | plusMinus : valueCalculateTwo: signalMinus}}</p>
+    <div>
+      <mat-icon class="mat-18">check_circle_outline</mat-icon>
+    </div>
+  </div>
+</div>

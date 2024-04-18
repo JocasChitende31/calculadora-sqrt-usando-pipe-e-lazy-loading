@@ -55,8 +55,6 @@
           outline: .1px solid greenyellow !important;
 
           transition: all .5s ease-in-out;
-
-
         }
 
         .required-sms {
@@ -77,6 +75,8 @@
 
         color: white;
         font-size: 15px;
+        letter-spacing: 1px;
+
         cursor: pointer;
 
         border-radius: 4px;
@@ -101,7 +101,8 @@
 
         margin: 15px auto;
         padding: 10px;
-
+        
+        letter-spacing: 1px;
         color: white;
         font-size: 15px;
         cursor: pointer;
@@ -158,10 +159,11 @@
       font-weight: bold;
       font-size: 15px;
       color: green;
-      margin:-15px auto 0 auto;
+      margin: -15px auto 0 auto;
       line-height: 1.5rem;
       letter-spacing: 1px;
     }
+
     div mat-icon {
       display: flex;
       justify-content: center;

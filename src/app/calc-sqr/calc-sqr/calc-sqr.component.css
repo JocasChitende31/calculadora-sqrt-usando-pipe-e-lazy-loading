@@ -93,6 +93,7 @@ form .btn-primary {
   padding: 10px;
   margin: 15px auto;
 
+  letter-spacing: 1px;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -119,7 +120,7 @@ form .btn-danger {
 
   margin: 15px auto;
   padding: 10px;
-
+  letter-spacing: 1px;
   color: white;
   font-size: 15px;
   cursor: pointer;
