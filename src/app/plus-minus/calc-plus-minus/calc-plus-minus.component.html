@@ -2,7 +2,7 @@
 <hr>
 <div class="content" *ngIf="!plus && !minus">
   <div class="plus-minus-btns">
-    <span>"Escolha a operação"</span>
+    <span >Escolha a operação</span>
     <button class="plus" (click)="showPlusForm()">Soma</button>
     <button class="minus" (click)="showMinusForm()">Subtração</button>
   </div>
@@ -10,6 +10,8 @@
 
 <div class="content-form" *ngIf="plus">
   <form class="form" [formGroup]="form">
+    <button class="btn-turn-back" (click)="btnTurnBackOperPlusMinus()"> <mat-icon
+      class="mat-18" >arrow_left</mat-icon> Op.</button>
     <div class="form-content">
       <div class="form-group">
         <label class="label-control" for="multiplying">1ºTermo<i
@@ -40,6 +42,9 @@
 
 <div class="content-form" *ngIf="minus">
   <form class="form" [formGroup]="form">
+    <button class="btn-turn-back" (click)="btnTurnBackOperPlusMinus()"> <mat-icon
+        class="mat-18" >arrow_left</mat-icon> Op.</button>
+
     <div class="form-content">
       <div class="form-group">
         <label class="label-control" for="numOne">1ºTermo<i

@@ -74,4 +74,9 @@ export class CalcPlusMinusComponent {
     this.form.reset();
     this.result = false;
   }
+  btnTurnBackOperPlusMinus(){
+    this.plus = false;
+    this.minus = false;
+
+  }
 }

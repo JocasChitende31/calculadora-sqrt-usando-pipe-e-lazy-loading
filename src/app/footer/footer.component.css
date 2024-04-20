@@ -1,5 +1,5 @@
-.newsletter{
-  height: 200px;
+.newsletter {
+  height: 100%;
 
   margin-top: 30px;
 
@@ -7,7 +7,65 @@
   /* background-color: rgb(33, 56, 132); */
   border-top: 1px solid cadetblue;
 
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 35px 0;
+
+    color: aliceblue;
+    letter-spacing: 1px;
+
+
+
+
+    .product,
+    .resource,
+    .contact,
+    .address {
+      h3 {
+        color: aliceblue;
+        /* color: rgb(22, 34, 73); */
+        /* background-color: aliceblue; */
+        /* border: 1px solid red; */
+        border-radius: 20px;
+        border: 1px solid rgb(22, 34, 73);
+        padding: 5px 0px;
+        margin: 0 0 20px 0;
+
+
+
+      }
+
+      p {
+        margin: 0 0 10px 0;
+
+        a {
+          letter-spacing: 2px;
+          color: rgb(201, 201, 201) !important;
+          font-size: small;
+
+          text-decoration: none;
+          padding: 0 0 0 10px;
+
+          transition: all .4s ease-in-out;
+        }
+
+        a:hover {
+          color: aliceblue !important;
+          transition: all .4s ease-in-out;
+
+        }
+      }
+    }
+
+  }
+
 }
+
 hr {
   display: none;
 }
@@ -108,6 +166,43 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
+
+  .newsletter {
+
+    .content {
+      width: 90%;
+
+      .product,
+      .resource,
+      .contact,
+      .address {
+        h3 {
+
+          font-size: 15px;
+          padding: 5px 0px;
+          margin: 0 0 5px 0;
+
+
+
+        }
+
+        p {
+          margin: 0 0 10px 0;
+
+          a {
+          padding: 0 0 0 3px;
+
+            letter-spacing: 2px;
+            color: rgb(201, 201, 201) !important;
+            font-size: smaller;
+          }
+        }
+      }
+
+    }
+
+  }
+
   .social {
     display: flex;
     flex-direction: row;
