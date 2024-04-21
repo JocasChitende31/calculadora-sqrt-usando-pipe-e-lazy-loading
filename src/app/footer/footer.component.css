@@ -1,7 +1,7 @@
 .newsletter {
   height: 100%;
-
-  margin-top: 30px;
+  z-index: 500000 !important;
+  margin-top: 0px;
 
   background-color: rgb(22, 34, 73);
   /* background-color: rgb(33, 56, 132); */
@@ -18,6 +18,7 @@
 
     color: aliceblue;
     letter-spacing: 1px;
+    z-index: 500000 !important;
 
 
 
@@ -78,6 +79,9 @@ hr {
 
 
   padding: 2px;
+
+  background-color: whitesmoke;
+
 
   .linkedin,
   .twitter,
@@ -190,7 +194,7 @@ hr {
           margin: 0 0 10px 0;
 
           a {
-          padding: 0 0 0 3px;
+            padding: 0 0 0 3px;
 
             letter-spacing: 2px;
             color: rgb(201, 201, 201) !important;

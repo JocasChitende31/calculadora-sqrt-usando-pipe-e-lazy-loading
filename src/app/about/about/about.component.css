@@ -1,12 +1,27 @@
 .about {
   width: 80%;
 
-  margin: 0 auto;
+  margin: 50px auto 0px auto;
 
   p {
-    margin: 45px 10px;
+    margin: 45px 10px 45px 10px;
+    /* margin: 45px 10px; */
     letter-spacing: 1px;
     line-height: 2rem;
     text-align: justify;
+
+    color: gray;
   }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .about {
+    p {
+      margin: 15px 10px 15px 10px !important;
+      font-size: small;
+      line-height: 1.5rem !important;
+    }
+  }
+
 }
