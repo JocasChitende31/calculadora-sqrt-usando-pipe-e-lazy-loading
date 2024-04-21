@@ -12,6 +12,7 @@ body {
     "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif, monospace;
     background-color: rgb(250, 246, 241);
+    z-index: -1;
 }
 
 /* .bg-component-children {
@@ -30,9 +31,14 @@ body {
   background-color: whitesmoke;
 
 }
-
+.mb-component-children{
+  margin: 150px 0;
+}
 @media only screen and (max-width: 600px) {
   .title {
     font-size: 15px;
+  }
+  .mb-component-children{
+    margin: 100px 0;
   }
 }

@@ -1,27 +1,30 @@
-<div class="bg-component-children">
-  <h1 class="title">{{pageTitle}}</h1>
-  <hr>
+<h1 class="title">{{pageTitle}}</h1>
+<hr>
 
-  <div class="content">
-    <div class="multiplie-table">
-      <form class="form" [formGroup]="form">
-        <div class="form-group">
-          <label for="numero" class="form-label">Tabuada<b style="color: red;">*</b></label>
-          <input type="number" class="form-control" name="numero" formControlName="numero" placeholder="número" min="0" required>
-          <span class="required-sms">{{valueRequired}}</span>
-        </div>
-        <button *ngIf="!result" class="btn-primary" (click)="getResult()">Calcular</button>
-        <button *ngIf="result" class="btn-danger" (click)="clearForm()">Apagar Dados</button>
-      </form>
-    </div>
-    <div class="result" *ngIf="result">
-      <b>A tabuada de {{valueCalculateTable}} é:</b>
-      <hr>
-      <p class="success">{{valueCalculateTable | multiplieTable}}</p>
-      <div>
-        <mat-icon class="mat-18">check_circle_outline</mat-icon>
+<div class="content">
+  <div class="multiplie-table">
+    <form class="form" [formGroup]="form">
+      <div class="form-group">
+        <label for="numero" class="form-label">Tabuada<b style="color: red;">*</b></label>
+        <input type="number" class="form-control" name="numero" formControlName="numero" placeholder="número" min="0"
+          required>
+        <span class="required-sms">{{valueRequired}}</span>
       </div>
+      <button *ngIf="!result" class="btn-primary" (click)="getResult()">Calcular</button>
+      <button *ngIf="result" class="btn-danger" (click)="clearForm()">Apagar Dados</button>
+    </form>
+  </div>
+  <div class="result" *ngIf="result">
+    <b>A tabuada de {{valueCalculateTable}} é:</b>
+    <hr>
+    <p class="success">{{valueCalculateTable | multiplieTable}}</p>
+    <div>
+      <mat-icon class="mat-18">check_circle_outline</mat-icon>
     </div>
   </div>
+</div>
+
+
+<div class="mb-component-children">
 
 </div>
